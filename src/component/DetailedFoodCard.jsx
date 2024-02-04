@@ -19,20 +19,20 @@ const DetailedFoodCard = ({ id, name, img, price, rating, desc, toastAdd }) => {
 
   return (
     <div>
-      <div className="flex gap-5 justify-center  items-center">
+      <div className="flex gap-5 flex-col lg:flex-row justify-center  items-center">
         <div className="mr-20">
           <img
             src={img}
             alt=""
-            className="w-[20rem] h-[20rem] ml-12 mt-12 hover:scale-110 cursor-grab transition-all duration-500 ease-in-out "
+            className="lg:w-[20rem] lg:h-[20rem] w-[10rem] h-[10rem]   ml-12 mt-12 hover:scale-110 cursor-grab transition-all duration-500 ease-in-out "
           />
         </div>
         <div>
-          <div className="font-semibold flex gap-8 py-3">
+          <div className="font-semibold flex lg:gap-8 justify-between py-3">
             <h1>{name} </h1>
             <h1 className="text-green-400">₹{price}</h1>
           </div>
-          <div className=" w-[36rem] ">{desc}</div>
+          <div className=" lg:w-[36rem]  w-[20rem]">{desc}</div>
           <div className="flex justify-between gap-12 py-3  ">
             <span className="flex justify-between items-center font-bold">
               <FaStar className="text-yellow-400  mr-1" />
